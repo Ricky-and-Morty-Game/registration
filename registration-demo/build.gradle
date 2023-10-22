@@ -6,6 +6,7 @@ plugins {
 
 apply plugin:
 	'org.springframework.boot'
+	'com.google.gms.-services'
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -30,13 +31,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+	implementation 'org.springframework.security:spring-security-web:6.1.2'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
 	implementation 'com.google.firebase:firebase-admin:8.0.1'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 }
 
 tasks.named('test') {
