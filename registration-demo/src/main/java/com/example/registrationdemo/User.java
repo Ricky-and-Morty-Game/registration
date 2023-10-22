@@ -1,5 +1,9 @@
 package com.example.registrationdemo;
-import jakarta.persistence.*;
+
+import com.google.firebase.database.annotations.NotNull;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,19 +16,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="registration")
 // MySQL table is Listed here to ensure connection
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
     // ID will be auto-incremented
-    @Column(nullable = false)
     private String userName;
-
-    @Column(nullable=false)
     private String password;
-
-    @Column(nullable=false, unique = true)
     private String email;
 }
