@@ -10,7 +10,6 @@ public class userService {
 // throughout our code. It works as a Dependency Injector
     @Autowired
     private PasswordEncoder passwordEncoder;
-
     private DatabaseReference db = FirebaseDatabase.getInstance().getReference();
     public User userRegistration (String userName, String password, String email) {
         User user = new User();
